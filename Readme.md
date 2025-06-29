@@ -1,40 +1,62 @@
-# 📚 Mini Library Management System (Java)
+# 📝 Java Notes Manager
 
-A simple multi-class Java project to manage books and users in a small library. Built using basic Java concepts with a terminal interface.
+A simple **text-based notes manager** built using Java.  
+This program allows users to **write and read notes** stored in a local text file using `FileWriter` and `BufferedReader`.
 
-##  Features
+## 📌 Features
 
-- Add sample books and users
-- View available books and registered users
-- Issue a book to a user (1 book per user limit)
-- Return a book
-- Simple menu-driven console UI
+- ✍️ Write notes to a file (`notes.txt`)
+- 📖 Read all saved notes
+- 💾 Stores notes persistently between runs
+- 🖥️ Works in terminal/command-line (text-based menu)
 
-##  Project Structure
-ibrarySystem/
-├── Book.java // Book class: title, author, issued status
-├── User.java // User class: name, borrowed book
-├── Library.java // Library class: stores books and users
-└── Driver.java // Entry point with interactive menu
+---
 
-Compile all .java files:
-javac Driver.java
+## 🔧 Tools Used
+
+- Java (JDK 8 or above)
+- VS Code or any Java IDE
+- Terminal / Command Prompt
+
+---
+
+## 📂 Files
+
+NotesManager.java // Main Java file
+notes.txt // File created to store user notes (auto-created)
+
+## 🚀 How to Run
+
+### 1️⃣ Compile the Java file:
+
+```bash
+javac NotesManager.java
+2️⃣ Run the program:
+java NotesManager
 
 
-Run the program:
-
-java Driver
-
-
- Sample Output
---- Library Menu ---
-1. View Books
-2. View Users
-3. Issue Book
-4. Return Book
+🧪 Sample Usage
+--- Notes Manager ---
+1. Write a Note
+2. Read Notes
 0. Exit
-Enter choice: 1
+Enter your choice: 1
+Enter your note: Review Java file handling
 
-Library Books:
-The Alchemist by Paulo Coelho [Available]
-1984 by George Orwell [Available]
+Note saved!
+
+--- Notes Manager ---
+1. Write a Note
+2. Read Notes
+0. Exit
+Enter your choice: 2
+
+--- Your Notes ---
+- Review Java file handling
+📄 How It Works
+Uses FileWriter to append notes to notes.txt
+
+Uses BufferedReader to read and display all notes
+
+Automatically creates the file if it doesn’t exist
+
